@@ -1,0 +1,12 @@
+h1{
+     border :2px solid red;
+}
+.container.app-content-container {
+    margin-top: 50px;
+}
+ul{
+    text-decoration:none;  
+}
+footer{
+    margin-top:20px;
+}
