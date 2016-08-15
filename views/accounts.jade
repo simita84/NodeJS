@@ -9,3 +9,13 @@ block content
       ul
         each accnt in accounts
             li= accnt.Name 
+    div
+      form(method='post' , action='/addAccnt')
+        p
+        label(for='name') Name
+          input(type='text', name='name')
+        p
+        label(for='site') site
+         input(type='text', name='site')
+        p
+        input(type='submit', value='Add New Account')

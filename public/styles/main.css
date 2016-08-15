@@ -8,5 +8,7 @@ ul{
     text-decoration:none;  
 }
 footer{
-    margin-top:20px;
+    margin:20px 20px;
+    background:#fff;
+    border-radius: 20px;
 }
