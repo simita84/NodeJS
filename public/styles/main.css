@@ -1,6 +1,6 @@
-h1{
-     border :2px solid red;
-}
+body{
+    background: #ccc;
+} 
 .container.app-content-container {
     margin-top: 50px;
 }

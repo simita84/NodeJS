@@ -5,6 +5,7 @@ block content
        
     body
       h1= title
+      if(accounts!=null)
       ul
         each accnt in accounts
-            li= accnt.name 
+            li= accnt.Name 
