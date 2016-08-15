@@ -1,0 +1,12 @@
+// To extend template: http://jade-lang.com/reference/extends/
+extends ./layout.jade
+block content
+  html
+    head
+      title= details.Project
+    body
+      h2.page-header= details.Project
+      h4= "Technologies used"
+      ul
+      each val, index in details.Technologies
+        li= index + ': ' + val
