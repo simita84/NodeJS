@@ -4,8 +4,12 @@ body{
 .container.app-content-container {
     margin-top: 50px;
 }
-ul{
-    text-decoration:none;  
+  span.col-md-4{
+    vertical-align: top;
+    display: inline-block;
+}
+ul li{
+    text-decoration:none; 
 }
 footer{
     margin:20px 20px;

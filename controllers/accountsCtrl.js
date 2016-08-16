@@ -24,17 +24,24 @@ genericCallback = function(error,result){
         //console.log('sfSessionId = '+sfSessionId+', sessionURL = '+sessionURL);
     }   
 }
- conn.login(mySDFC_Username,mySDFC_Password,genericCallback);
-               
+ conn.login(mySDFC_Username,mySDFC_Password,genericCallback); 
 
 exports.addAccount = function(req,res){
     console.log('---------------Inside addAccount---------------');
     console.log(req.body);
     res.redirect('/accounts');
+    // Single record creation
+    conn.sobject("Account").create({ Name : req.body.name ,
+                                     Site :   req.body.site  ,
+                                     Industry :   req.body.industry     }, 
+                function(err, ret) {
+                    if (err || !ret.success) { return console.error(err, ret); }
+                    console.log("Created record id : " + ret.id);
+    });
 }
 
 exports.displayAccounts = function(req,res){
-    console.log('Inside displayAccounts');
+    //console.log('Inside displayAccounts');
    // async.waterfall([
         /*function(callback) {
             conn.login(mySDFC_Username,mySDFC_Password,genericCallback);
@@ -45,18 +52,18 @@ exports.displayAccounts = function(req,res){
             },2000);    
         },
         function(callback) {*/
-            conn.query('select id,name from Account limit 10',function(error,result){
+            conn.query('select id,name,Site from Account order by createddate desc limit 5',function(error,result){
             if(error){
                     console.log('Cannot fetch data'+error);
             }
-            //console.log(result.records);
+            console.log("--------Accounts fetched--------");
+            console.log(result.records);
             res.render('accounts',{
                 title :"Top 10 Accounts in this org",
                 accounts :result.records
-                });
-            
-            
-            });/*
+                }); 
+            });
+            /*
 
             //callback(accounts,null);
         }

@@ -8,9 +8,9 @@ var bodyParser = require('body-parser');
 var homeCtrl = require('./controllers/homeCtrl') ; 
 var acctsCtrl = require('./controllers/accountsCtrl') ; 
 
- 
+  
 
-app.set('views', './views'); 
+app.set('views', './views');  
 app.set('view engine', 'jade');  
 app.use(express.static('public'));
 app.use(express.static('node_modules')); 
@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 
 //--- check if the homeCtrl file is included----/
-console.log('the home control-->'+homeCtrl.home);  
+//console.log('the home control-->'+homeCtrl.home);  
   
 // Request response handling---
 app.get('/',homeCtrl.home); 
