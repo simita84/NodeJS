@@ -2,9 +2,35 @@ extends ./layout.jade
 block content
   html
     head
+    body.container
+  
+    div
+        h4= "Create a new acccount"
+        span.col-md-4
+          form(method='post' , action='/addAccnt' class='form')
+            div.form-group
+              p
+              label(for='name') Name
+              input(type='text', name='name' class="form-control")
+            div.form-group
+              p
+              label(for='site') Account Site
+              input(type='text', name='site' class="form-control")
+             div.form-group
+              p
+              label(for='industry') Account Industry
+              input(type='text', name='industry' class="form-control")
+            div.form-group
+              p
+              input(type='submit', value='Add New Account' class="form-control")
+        
+          h4= "Top Accounts"
+          span.col-md-4
+            ul
+            each val, index in accounts
+              li= val.Name
+                ul
+                  li= val.Site
+            
+                
        
-    body
-      h1= title
-      ul
-        each accnt in accounts
-            li= accnt.name 
