@@ -2,8 +2,8 @@
 var jsforce             =  require('jsforce');
 var async               =  require('async');
 var conn                =  new jsforce.Connection();
-var mySDFC_Username     = 'simi.tresa.antony@gmail.com';
-var mySDFC_Password     = 'simiraj2010nDDMSAazy9Qbqn5uG1t7qwoI';
+var mySDFC_Username     =  'mySDFC_Username';
+var mySDFC_Password     =  'mySDFC_Password';
 var accounts            = [];
 var accessToken         ='';
 var instanceUrl          = '';
