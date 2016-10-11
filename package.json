@@ -23,6 +23,9 @@
     "jsforce": "^1.7.0",
     "request": "^2.74.0"
   },
+  "scripts": {
+    "start": "node server.js"
+  },
   "devDependencies": {
     "nodemon": "^1.10.0"
   },
