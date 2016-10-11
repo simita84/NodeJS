@@ -28,7 +28,7 @@ app.post('/addAccnt',acctsCtrl.addAccount);
  
 
   
-// Start your Express app up on port 3000
+// Start your Express app up on port  
 //---starting the server--------
 app.listen(process.env.PORT, function () { 
   console.log('Example app listening on port 8080!');
