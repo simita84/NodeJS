@@ -25,11 +25,11 @@
   },
   "scripts": {
     "start": "node server.js"
-  },
+  }, 
   "devDependencies": {
     "nodemon": "^1.10.0"
   },
   "engines": {
     "node":"5.4.1" 
-  }
+  } 
 }
